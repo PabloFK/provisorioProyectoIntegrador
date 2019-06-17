@@ -31,11 +31,7 @@ $fechaDefault = "";
                   registrar($usuario);
                   
                 }
-              
-                foreach ($errores as $error) {
-                  echo $error . "<br>";
-                }
-              
+                                        
                 $nombreDefault = $_POST["name"];
                 $emailDefault = $_POST["email"];
                 $fechaDefault = $_POST["birthday"];
@@ -69,6 +65,7 @@ $fechaDefault = "";
                         <div class="form-group text-center">
                             <button type="submit" class="btn btn-secondary active">ENTRAR</button>
                         </div>
+                        <?php foreach ($errores as $error) {echo $error . "<br>";}?>
                         
                     </form>
                 </div>
